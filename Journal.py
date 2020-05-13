@@ -13,19 +13,19 @@ pane.pack(fill=NONE, expand=True)
 button1 = Button(pane, text="Previously written", width=30).pack(fil=BOTH, expand=True)
 
 
-def newwindow():
+def new_window():
 
-    toplevel = Toplevel()
-    toplevel.title('New Journal')
-    toplevel.geometry('1000x300')
+    top_level = Toplevel()
+    top_level.title('New Journal')
+    top_level.geometry('1000x300')
 
-    label = tk.Label(toplevel, text="New Journal")
-    entry = tk.Entry(toplevel)
+    label = tk.Label(top_level, text="New Journal")
+    entry = tk.Text(top_level, height=100, width=100)
     label.pack()
     entry.pack()
 
 
-button2 = Button(pane, text="Write new Journal", command=newwindow).pack(fill=BOTH, expand=True)
+button2 = Button(pane, text="Write new Journal", command=new_window).pack(fill=BOTH, expand=True)
 
 
 mainloop()
